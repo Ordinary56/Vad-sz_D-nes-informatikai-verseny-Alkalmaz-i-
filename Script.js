@@ -1,1 +1,3 @@
-ScrollReveal().reveal('.navbar',{origin:'top',distance:'20px',duration:2000});
+//#region Scroll reveal
+
+//#endregion
