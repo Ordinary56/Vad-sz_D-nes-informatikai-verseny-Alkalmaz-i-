@@ -1,3 +1,0 @@
-//#region Scroll reveal
-
-//#endregion

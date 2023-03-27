@@ -10,15 +10,17 @@
     src: url('./Fonts/Dosis-VariableFont_wght.ttf');
 }
 body {
-    background-color: #CBAC;
+    background-color: var(--background);
 }
 
 /*#region Bootstrap overrides*/
 .rounded {
     border-radius: 50%;
     margin: auto;
-    width: 179px;
-    height: 230px;
+    width: 100%;
+    max-width: 179px;
+    height: 100%;
+    max-height: 230px;
 }
 
 .navbar {
@@ -42,16 +44,25 @@ body {
 
 .card {
     text-align: center;
-    box-shadow: 9px 5px 16px 2px #3F3F3F;
+    box-shadow: 9px 5px 16px 2px var(--box-shadow);
     transition: transform 0.4s ease-in-out;
 }
 
+.card-title{
+        font-size:100%;
+}
 
 /*#endregion*/
 
+/*#region Custom syle definitions*/
+.section-container {
+    border-radius: 12px;
+    box-shadow: 12px 14px 16px 2px var(--box-shadow);
+    background-color: #FAF3DD;
+}
+/*#endregion*/
+
 /*#region Animations and transitions*/
-
-
 .card:hover {
     cursor: pointer;
     transform: scale(1.1) !important;
@@ -66,7 +77,6 @@ body {
         --gradient-angle:360deg;
     }
 }
-
 /*#endregion*/
 
 /*#region Variables and properties*/
@@ -76,8 +86,8 @@ body {
     inherits: false;
 }
 :root {
-    --clr1: #052b2f;
-    --clr2: #073438;
+    --background: #CBAC;
+    --box-shadow: #3F3F3F;
     --clr3: #0E4B50;
     --clr4: #2D8F85;
     --clr5: #637C54;
@@ -85,6 +95,16 @@ body {
 /*#endregion*/
 
 /*#region Media Queries*/
-
-
+@media only screen and  (max-width:768px){
+    .row{
+        display: block;
+    }
+    .rounded{
+        width: 80%;
+        min-width: 118px;
+        max-width: 179px;
+        min-height: 201px;
+        max-height: 230px;
+    }
+}
 /*#endregion*/
