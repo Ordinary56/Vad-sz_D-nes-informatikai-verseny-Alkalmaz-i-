@@ -11,12 +11,13 @@
 }
 body {
     background-color: var(--background);
+    
 }
 
 /*#region Bootstrap overrides*/
 .rounded {
     border-radius: 50%;
-    margin: auto;
+   
     width: 100%;
     max-width: 179px;
     height: 100%;
@@ -51,8 +52,14 @@ body {
 .card-title{
         font-size:100%;
 }
-
+.btn {
+    box-shadow: 12px 14px 13px 1px var(--box-shadow);
+    border-radius: 2%;
+    backdrop-filter: blur(5px);
+    
+}
 /*#endregion*/
+
 
 /*#region Custom syle definitions*/
 .section-container {
@@ -62,35 +69,22 @@ body {
 }
 /*#endregion*/
 
+
 /*#region Animations and transitions*/
 .card:hover {
     cursor: pointer;
     transform: scale(1.1) !important;
 }
-
-
-@keyframes rotate {
-    0% {
-        --gradient-angle:0deg;
-    }
-    100% {
-        --gradient-angle:360deg;
-    }
-}
 /*#endregion*/
 
-/*#region Variables and properties*/
-@property --gradient-angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
+
+/* #region Variables and properties */
+
 :root {
     --background: #CBAC;
     --box-shadow: #3F3F3F;
-    --clr3: #0E4B50;
-    --clr4: #2D8F85;
-    --clr5: #637C54;
+    
+
 }
 /*#endregion*/
 
