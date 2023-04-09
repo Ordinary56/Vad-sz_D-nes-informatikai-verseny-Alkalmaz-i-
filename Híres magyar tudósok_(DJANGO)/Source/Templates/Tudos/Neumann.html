@@ -1,0 +1,63 @@
+<!-- Inherit from base -->
+{% extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+<section class="section-container my-4 p-4 text-justify">
+    <div class="mt-4 p-3">
+        <h1 style="text-decoration:underline;" class="text-center">Neumann János (1903-1957)</h1>
+
+    </div>
+    <div>
+        <h2>Élete:</h2>
+        <img src="{%static 'Images/Neumann.jpg'%}" alt="" style="float:right" class="rounded ml-5">
+        <p>1903-ban született egy zsidó család gyermekeként. 10 évesen szülei beíratták a híres fasori
+            evangélikus főgimnáziumba.</p>
+        <p>1921-ben beiratkozott a Budapesti Tudományegyetem matematika szakára.
+            Berlinben is tartózkodott ahol Fritz Habernél
+            (Nobel-díjas kémikus) kémiát,
+            Albert Einsteinnél(Nobel-díjas elméleti fizikus) statikus mechanikát tanult.
+            1923-ban Zürichbe ment hogy vegyészetet tanuljon(1925 vegyészeti diploma).</p>
+        <p>1928-ban megfogalmazta a kétszemélyes nullaösszegű nem kooperatív játék egyensúlyát,
+            és bizonyította az egyensúly létezését. 1930-1931 között a Princetoni Egyetem professzora lett majd
+            1933-1955 között az újonnan megnyílt princetoni Institute for Advanced Studies professzora.</p>
+        <p>1951-1953 az Amerikai Matematika Társaság elnöke volt. 1954-ben megkapta az
+            Egyesült Államok Érdemérmet. 1955-ben az AEC(az 5 tagú atomenergiai bizottság)
+            tagjává nevezték. Tudományos pályafutásának évei alatt foglalkozott a kvantum- és
+            halmazelmélettel, a matematika alapjaival és a matematikai logikával.</p>
+
+        <h2>Tanulmányai:</h2>
+        <ul>
+            <li>1913: fasori evangélikus főgimnázium</li>
+            <li>1921: Budapesti Tudományegyetem matematika szak</li>
+            <li>Berlin: Fritz Harbernél kémiát, Albert
+                Einsteinnél statikus mechanikát tanult</li>
+            <li>1923: Zürichben vegyészetet tanul</li>
+        </ul>
+        <h2>Munkássága és eredményei:</h2>
+        <ul>
+            <li>1925: vegyészeti diploma</li>
+            <li>1928: megfogalmazta a kétszemélyes nullaösszegű nem kooperatív játék egyensúlyát</li>
+            <li>1928: egyensúly létezésének bizonyítása</li>
+            <li>1930-1931: Princetoni Egyetem professzora</li>
+            <li>1933-1955: az újonnan megnyílt princetoni Institute for Advanced Studies professzora</li>
+            <li>1951-1953: az Amerikai Matematika Társaság elnöke volt</li>
+            <li>1954: megkapta az Egyesült Államok Érdemérmet</li>
+            <li>1955: az AEC(az 5 tagú atomenergiai bizottság) tagjává nevezték</li> <br>
+        </ul>
+        <p>Miután teljessé tette a halmazelmélet axiómarendszerét nekiállt a kvantummechanika
+            axiomatizálásához. Neumann absztrakt kezelési módja lehetővé tette neki
+            hogy a determinista és a nem-determinista álláspontok ügyét is figyelembe vegye. </p>
+        <p>Egyik könyvébe megmutatta hogy a kvantummechanika nem származtatható egy klasszikus
+            mechanikához hasonló determinisztikus elmélet statisztikai megközelítéséből.
+            Neumann emlékére számos iskolát, utcát, díjat, bolygót neveztek el róla.</p>
+    </div>
+    <div class="row">
+        <a href="../index.html" class="col ">
+            <button class="btn btn-link">
+                <p>Vissza a főmenübe</p>
+            </button>
+        </a>
+    </div>
+    </section>
+{%endblock%}

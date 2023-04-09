@@ -1,0 +1,48 @@
+
+<!-- Inherit from base -->
+{% extends 'base.html'%}
+
+{%load static%}
+    {%block content%}
+    <section>
+        
+        <div class="row justify-content-around text-center">
+            <a href="{% url 'Neumann' %}" class="text-dark  col-md-5 card mx-auto my-4 p-5">
+                <div class="card-frame">
+                    <img src="{%static 'Images/Neumann.jpg'%}" alt="Neumann" title="Neumann János" class="rounded" height="169"
+                        width="250">
+                    <div class="card-body">
+                        <h1 class="card-title text-center">Neumann János</h1>
+                    </div>
+                </div>
+            </a>
+            <a href="{%url 'Puskas'%}" class="text-dark  col-md-5 card mx-auto my-4 p-5">
+                <div class="card-frame">
+                    <img src="{%static 'Images/Puskas_Tivadar.jpg'%}" alt="Puskás Tivadar" title="Puskás Tivadar" class="rounded">
+                    <div class="card-body">
+                        <h1 class="card-title">Puskás Tivadar</h1>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="row justify-content-around">
+            <a href="{%url 'Jedlik'%}" class="text-dark col-md-5 card mx-auto my-lg-4 p-5">
+                <div class="card-frame">
+                    <img src="{%static 'Images/Jedlik_Anyos.jpg'%}" alt="Jedlik Ányos" title="Jedlik Ányos" class="rounded">
+                    <div class="card-body">
+                        <h1 class="card-title">Jedlik Ányos</h1>
+                    </div>
+                </div>
+            </a>
+            <a href="{%url 'Rubik'%}" class="text-dark  col-md-5 card mx-auto my-4 p-5">
+                <div class="card-frame">
+                    <img src="{%static 'Images/Rubik_Erno.jpg'%}" alt="Rubik Ernő" title="Rubik Ernő" class="rounded">
+                    <div class="card-body">
+                        <h1 class="card-title">Rubik Ernő</h1>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+    </section>
+    {%endblock%}
