@@ -12,7 +12,7 @@ class QuesModel(models.Model):
     option3 = models.CharField(max_length=100,null=True)
     option4 = models.CharField(max_length=100,null=True)
     option5 = models.CharField(max_length=100,null=True)
-    ID = models.BigIntegerField()
+    scientist = models.CharField(max_length=100,null=True)
     ans = models.CharField(max_length=100,null=True)
     
     def __str__(self) -> str:

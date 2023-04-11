@@ -22,10 +22,15 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('',index_view,name='index'),
-    path('qz',Quiz_view),
     path('Neumann',Neumann_view,name="Neumann"),
     path('Puskas_Tivadar',Puskas_view,name="Puskas"),
     path('Jedlik_Anyos',Jedlik_view,name='Jedlik'),
     path('Rubik_Erno',Rubik_view,name='Rubik'),
+    path('Question1',Question1_view,name='quiz'),
+    path('Question2',Question2_view),
+    path('Question3',Question3_view),
+    path('Question4',Question4_view),
+    path('Question5',Question5_view)
+
     
 ]

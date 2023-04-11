@@ -1,0 +1,49 @@
+{% extends 'quiz-base.html'%}
+{%load static%}
+{% block content%}
+<section class="container my-4 p-4 section-container text-justify">
+    <div class="mt-4 p-4 text-center my-4 m-auto"
+        style="text-decoration: underline; 
+        font-size: 2rem; 
+        background-color: rgba(100,100,100,0.5); 
+        border-radius: 20px; 
+        width: 50vw;">
+        2# Kérdés
+    </div>
+    <section class="text-center">
+        <form method="POST" action="">
+            {%csrf_token%}
+            
+            <div>
+                <label for="question">
+                   {{Title}}
+                </label>
+                <div>
+                    <input type="radio" name="{{Title}}" id="" value="{{option1}}">
+                    <label for=""> {{option1}}</label>
+                </div>
+                <div>
+                    <input type="radio" name="{{Title}}" id="" value="{{option2}}">
+                    <label for=""> {{option2}}</label>
+                </div>
+                <div>
+                    <input type="radio" name="{{Title}}" id="" value="{{option3}}">
+                    <label for="">{{option3}}</label>
+                </div>
+                <div>
+                    <input type="radio" name="{{Title}}" id="" value="{{option4}}">
+                    <label for=""> {{option4}}</label>
+                </div>
+                {%if option5 != "-"%}
+                <div>
+                    <input type="radio" name="{{Title}}" id="" value="{{option5}}">
+                    <label for=""> {{option5}}</label>
+                </div>
+            </div>
+            {%endif%}
+          
+            <button type="submit">Válasz érvényesítése</button>
+        </form>
+    </section>
+</section>
+{%endblock%}

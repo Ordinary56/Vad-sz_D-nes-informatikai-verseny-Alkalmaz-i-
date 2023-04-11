@@ -1,4 +1,4 @@
-!-- Inherit from base -->
+<!-- Inherit from base -->
 {% extends 'base.html'%}
 {%load static%}
 
@@ -23,6 +23,20 @@
         </p>
         <p>A Rubik-kocka mellett Rubik Ernő számos más találmányt is kifejlesztett, például a Rubik's Tangle-t és a
             Rubik's Magic-t.</p>
+    </div>
+        <div class="row">
+        <a href="{%url 'index'%}" class="col ">
+            <button class="btn btn-link text-decoration-none text-dark">
+                <p>Vissza a főmenübe</p>
+            </button>
+        </a>
+    </div>
+    <div class="row" style="margin-top: -8%;">
+        <a href="{% url 'quiz'%}?value=Rubik">
+            <button class="btn btn-link text-decoration-none text-dark" value="Rubik" name="Quiz-button">
+                <p>Tovább a Kvízre</p>
+            </button>
+        </a>
     </div>
 </section>
 {%endblock%}

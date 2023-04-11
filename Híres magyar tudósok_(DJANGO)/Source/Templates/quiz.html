@@ -1,50 +1,45 @@
-<!DOCTYPE html>
-{% block content%}
+{% extends 'quiz-base.html'%}
 {%load static%}
-<html lang="hu">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>test</h1>
-    <form method="POST" action="">
-        {%csrf_token%}
-        
-        <div>
-            <label for="question">
-                {{title}}
-            </label>
+{% block content%}
+<section class="container my-4 p-4 section-container text-justify">
+    <div class="mt-4 p-4 text-center my-4 m-auto" style="text-decoration: underline; font-size: 2rem; background-color: rgba(100,100,100,0.5); border-radius: 20px; width: 50vw;">
+        1# Kérdés
+    </div>
+    <section class="text-center ">
+        <form method="POST" action="">
+            {%csrf_token%}
+            {%for q in questions%}
             <div>
-                <input type="radio" name="{{q.question_title}}" id="" value="Igen">
-                <label for="">{{option1}}</label>
+                <label for="question">
+                    {{q.question_title}}
+                </label>
+                
+                <div >
+                    <input type="radio" name="{{q.question_title}}" id="" value="{{q.option1}}">
+                    <label for=""> {{q.option1}}</label>
+                </div>
+                <div >
+                    <input type="radio" name="{{q.question_title}}" id="" value="{{q.option2}}">
+                    <label for=""> {{q.option2}}</label>
+                </div>
+                <div >
+                    <input type="radio" name="{{q.question_title}}" id="" value="{{q.option3}}">
+                    <label for="">{{q.option3}}</label>
+                </div>
+                <div >
+                    <input type="radio" name="{{q.question_title}}" id="" value="{{q.option4}}">
+                    <label for=""> {{q.option4}}</label>
+                </div>
+                {%if q.option5 != "-"%}
+                <div>
+                    <input type="radio" name="{{q.question_title}}" id="" value="{{q.option5}}">
+                    <label for=""> {{q.option5}}</label>
+                </div>
             </div>
-            <div>
-                <input type="radio" name="{{q.question_title}}" id="" value="option2">
-                <label for="">{{q.option2}}</label>
-            </div>
-            <div>
-                <input type="radio" name="{{q.question_title}}" id="" value="option3">
-                <label for="">{{q.option3}}</label>
-            </div>
-            <div>
-                <input type="radio" name="{{q.question_title}}" id="" value="option4">
-                <label for="">{{q.option4}}</label>
-            </div>
-            <div>
-                <input type="radio" name="{{q.question_title}}" id="" value="option5">
-                <label for="">{{q.option5}}</label>
-            </div>
-        </div>
-        
-        <button type="submit" >Submit</button>
-    </form>
-    
+            {%endif%}
+            {%endfor%}
+            <button type="submit" class="btn btn-secondary mt-3" style="border-radius: 30px; padding: 13px;">Válasz érvényesítése</button>
+        </form>
+    </section>
+    </section>
     {%endblock%}
-</body>
-
-</html>

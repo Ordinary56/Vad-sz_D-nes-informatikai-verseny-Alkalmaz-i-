@@ -53,9 +53,16 @@
             Neumann emlékére számos iskolát, utcát, díjat, bolygót neveztek el róla.</p>
     </div>
     <div class="row">
-        <a href="../index.html" class="col ">
-            <button class="btn btn-link">
+        <a href="{%url 'index'%}" class="col ">
+            <button class="btn btn-link text-decoration-none text-dark">
                 <p>Vissza a főmenübe</p>
+            </button>
+        </a>
+    </div>
+    <div class="row" style="margin-top: -8%;">
+        <a href="{% url 'quiz'%}?value=Neumann">
+            <button class="btn btn-link text-decoration-none text-dark" value="Neumann" name="Quiz-button">
+                <p>Tovább a Kvízre</p>
             </button>
         </a>
     </div>

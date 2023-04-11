@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
-{%block content%}
+
 
 <head>
     <meta charset="UTF-8">
@@ -10,8 +10,9 @@
 </head>
 
 <body>
-    <p>{{ correct }}</p>
-    <p>{{ wrong }}</p>
+    {%block content%}
+    <p>Helyes válasz: {{ correct }}</p>
+    <p>Rossz válasz: {{ wrong }}</p>
    
 </body>
  {%endblock%}
