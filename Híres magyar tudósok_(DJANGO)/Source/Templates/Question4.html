@@ -14,35 +14,35 @@
         <form method="POST" action="">
             {%csrf_token%}
             
-            <div>
+            <div class="Question">
                 <label for="question">
                    {{Title}}
                 </label>
                 <div>
-                    <input type="radio" name="{{Title}}" id="" value="{{option1}}">
-                    <label for=""> {{option1}}</label>
+                    <input type="radio" name="{{Title}}" id="one" value="{{option1}}">
+                    <label  for="one"> {{option1}}</label>
                 </div>
                 <div>
-                    <input type="radio" name="{{Title}}" id="" value="{{option2}}">
-                    <label for=""> {{option2}}</label>
+                    <input type="radio" name="{{Title}}" id="two" value="{{option2}}">
+                    <label for="two"> {{option2}}</label>
                 </div>
                 <div>
-                    <input type="radio" name="{{Title}}" id="" value="{{option3}}">
-                    <label for="">{{option3}}</label>
+                    <input type="radio" name="{{Title}}" id="three" value="{{option3}}">
+                    <label for="three">{{option3}}</label>
                 </div>
                 <div>
-                    <input type="radio" name="{{Title}}" id="" value="{{option4}}">
-                    <label for=""> {{option4}}</label>
+                    <input type="radio" name="{{Title}}" id="four" value="{{option4}}">
+                    <label for="four"> {{option4}}</label>
                 </div>
                 {%if option5 != "-"%}
                 <div>
-                    <input type="radio" name="{{Title}}" id="" value="{{option5}}">
-                    <label for=""> {{option5}}</label>
+                    <input type="radio" name="{{Title}}" id="five" value="{{option5}}">
+                    <label for="five"> {{option5}}</label>
                 </div>
             </div>
             {%endif%}
           
-            <button type="submit">Válasz érvényesítése</button>
+            <button type="submit" class="subButton">Válasz érvényesítése</button>
         </form>
     </section>
 </section>

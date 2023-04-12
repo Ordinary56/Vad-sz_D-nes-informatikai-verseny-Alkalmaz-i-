@@ -5,10 +5,10 @@
     font-weight: bold;
     
 }
-@font-face {
+/* @font-face {
     font-family: Dosis;
-    src: url('./Fonts/Dosis-VariableFont_wght.ttf');
-}
+    src: url('./Fonts/Dosis-VariableFont_wght.ttf'); 
+}*/
 body {
     background-color: var(--background);
     
@@ -68,9 +68,63 @@ body {
     background-color: #FAF3DD;
 }
 
+label{
+    margin: 10px 0;
+    cursor: pointer;
+}
+input[type="radio"] {
+    visibility: hidden;
+}
 
+input[type="radio"]:checked + label {
+    background-color: rgba(248, 234, 188, 0.6);
+    border: 2px solid rgb(197, 186, 149);
+    border-width: 3px;
+    width: 30vw;
+    border-radius: 2rem;
+    padding: 5px;
+}
+#result_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px);
+}
 
+ form{
+     min-height: calc(100vh - 300px); 
+} 
 
+.results{
+    height: 50vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    margin: 10px;
+    border: 2px solid rgb(0, 0,0);
+    background-color: rgba(0,0,0,0.6);
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.subButton{
+    background-color: rgba(248, 234, 188, 0.3);
+    border: 2px solid rgb(197, 186, 149);
+    width: 30vw;
+    border-radius: 1rem;
+}
+.subButton:hover{
+    background-color: rgba(247, 224, 149, 0.6);
+    border: 2px solid rgb(153, 138, 88);
+    transition: 1s;
+}
 /*#endregion*/
 
 

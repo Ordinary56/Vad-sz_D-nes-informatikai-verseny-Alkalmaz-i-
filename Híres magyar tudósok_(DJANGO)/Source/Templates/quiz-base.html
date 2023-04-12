@@ -27,11 +27,10 @@
         <link rel="stylesheet" href="{%static 'style.css'%}">
     </head>
 
-    {%block content%}
-        <body>
-            
+    <body>
+            {%block content%}
+            {%endblock%}
         </body>
-    {%endblock%}
     <footer class="text-center" class="footer">
         {%block footer%}
         <div class="pt-4 bg-dark" style="height: 15vh;">
@@ -39,7 +38,8 @@
                 © 2023 Vadász Dénes Informatikai verseny Alkalmazói
             </p>
             <br>
-            <p class="text-white"> Made with Bootstrap <i class="fa-brands fa-bootstrap "></i></p>
+            <p class="text-white"> Made with Bootstrap <i class="fa-brands fa-bootstrap "></i> <br>
+                and  Django  <i class="fa-brands fa-python "></i></p>
         </div>
         {%endblock%}
     </footer>

@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section>
-    <h1>Eredmények</h1>
-    <p>Helyes válaszok: {{correct}}</p>
-    <p>Rossz válaszok: {{wrong}}</p>
-    <p>Százalék: {{percent}}</p>
+<section id="result_container" style="margin: auto;">
+    <div class="results">
+        <h1>Eredmények</h1>
+        <p>Helyes válaszok: {{correct}}</p>
+        <p>Rossz válaszok: {{wrong}}</p>
+        <p class = "{% if percent == 100 %} text-success {%elif percent >= 90%} text-info {%elif percent >= 50%} text-warning {%else%} text-danger{%endif%}">Százalék: {{percent}}%</p>
+        <a href="{% url 'index'%}"><button class="subButton">Vissza a főoldalra</button></a>
+    </div>
 </section>
 {% endblock %}

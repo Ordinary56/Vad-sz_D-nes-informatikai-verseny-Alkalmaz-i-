@@ -17,6 +17,8 @@ def Question1_view(request: HttpRequest) -> HttpResponse:
     global Current_DB
     global correct
     global wrong
+    correct = 0
+    wrong = 0
     if request.method == "POST":
         if Current_DB[0].ans == request.POST.get(Current_DB[0].question_title):
             correct += 1
@@ -112,7 +114,7 @@ def Question5_view(request: HttpRequest) -> HttpResponse:
             correct += 1
         else:
             wrong += 1
-        return redirect("\Result")
+        return redirect("/Result")
     else:
      
         context_dict = {
@@ -129,10 +131,11 @@ def Question5_view(request: HttpRequest) -> HttpResponse:
 def Result_view(request:HttpRequest) -> HttpResponse:
     global correct
     global wrong
+    percent = (correct/5)*100
     context_dict= {
         'correct':correct,
         'wrong': wrong,
-        'percent': (correct//5)*100
+        'percent': percent
     }
     return render(request,"result.html",context_dict)
 

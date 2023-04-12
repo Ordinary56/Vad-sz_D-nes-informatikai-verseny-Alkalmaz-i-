@@ -9,6 +9,7 @@
     </div>
     <div>
         <h2>Élete</h2>
+        <img src="{%static 'Images/Puskas_Tivadar.jpg'%}" alt="" style="float:right" class="rounded ml-5">
         <p>Puskás Tivadar mérnök, feltaláló(Telefonhírmondó) és Puskás Ferenc hadmérnök bátyja.</p>
 
         <p>1844-ben született apja elfecsérelte a családi vagyont. Katonás neveltetésben nevelkedett majd később a
@@ -37,14 +38,14 @@
     </div>
         <div class="row">
         <a href="{% url 'index'%}" class="col ">
-            <button class="btn btn-link text-decoration-none text-dark">
+            <button class="btn btn-link text-decoration-none text-dark rounded">
                 <p>Vissza a főmenübe</p>
             </button>
         </a>
     </div>
     <div class="row" style="margin-top: -8%;">
         <a href="{% url 'quiz'%}?value=Puskas">
-            <button class="btn btn-link text-decoration-none text-dark" value="Puskas" name="Quiz-button">
+            <button class="btn btn-link text-decoration-none text-dark rounded" value="Puskas" name="Quiz-button">
                 <p>Tovább a Kvízre</p>
             </button>
         </a>
