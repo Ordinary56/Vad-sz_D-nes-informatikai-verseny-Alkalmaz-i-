@@ -126,6 +126,18 @@ def Question5_view(request: HttpRequest) -> HttpResponse:
         return render(request, 'Question5.html', context_dict)
 
 
+def Result_view(request:HttpRequest) -> HttpResponse:
+    global correct
+    global wrong
+    context_dict= {
+        'correct':correct,
+        'wrong': wrong,
+        'percent': (correct//5)*100
+    }
+    return render(request,"result.html",context_dict)
+
+
+
 def Neumann_view(request: HttpRequest) -> HttpResponse:
     return render(request, "Tudos/Neumann.html")
 

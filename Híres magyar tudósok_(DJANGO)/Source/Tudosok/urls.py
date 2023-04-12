@@ -30,7 +30,8 @@ urlpatterns = [
     path('Question2',Question2_view),
     path('Question3',Question3_view),
     path('Question4',Question4_view),
-    path('Question5',Question5_view)
+    path('Question5',Question5_view),
+    path("Result",Result_view)
 
     
 ]

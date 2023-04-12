@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="hu">
+{% extends 'base.html' %}
 
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    {%block content%}
-    <p>Helyes válasz: {{ correct }}</p>
-    <p>Rossz válasz: {{ wrong }}</p>
-   
-</body>
- {%endblock%}
-</html>
+{% block content %}
+<section>
+    <h1>Eredmények</h1>
+    <p>Helyes válaszok: {{correct}}</p>
+    <p>Rossz válaszok: {{wrong}}</p>
+    <p>Százalék: {{percent}}</p>
+</section>
+{% endblock %}
